@@ -2,7 +2,7 @@ main: me.dio.arena.Arena
 name: Arena
 version: '1.0'
 description: A test plugin
-author: chikecee
+author: dio-source
 commands:
   archer:
     description: archer kit

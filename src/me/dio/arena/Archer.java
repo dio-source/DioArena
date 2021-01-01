@@ -7,7 +7,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,10 +23,6 @@ public class Archer implements CommandExecutor {
         if (sender instanceof Player) {
             Player p = (Player) sender;
 
-            if (CM.checkCooldown(p)) {
-                p.sendMessage("Used");
-                CM.setCooldown(p, 10);
-
                 ItemStack lhelmet = new ItemStack(Material.LEATHER_HELMET);
                 ItemStack lchest = new ItemStack(Material.LEATHER_CHESTPLATE);
                 ItemStack llegg = new ItemStack(Material.LEATHER_LEGGINGS);
@@ -35,12 +33,7 @@ public class Archer implements CommandExecutor {
 
                 p.getInventory().addItem(lhelmet, lchest, llegg, lboot, bow, arrow);
 
-            } else {
-
-                p.sendMessage("You cannot do this for another " + CM.getCooldown(p) + " seconds");
-
             }
-        }
         return true;
     }
 }

@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="DioArena:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DioArena_jar</output-path>
+    <root id="archive" name="DioArena.jar">
+      <element id="module-output" name="DioArena" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/me/dio/arena/plugin.yml" />
+      <element id="extracted-dir" path="$USER_HOME$/.jdks/mc 1.8/spigot-1.8.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
