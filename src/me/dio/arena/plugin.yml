@@ -1,0 +1,9 @@
+main: me.dio.arena.Arena
+name: Arena
+version: '1.0'
+description: A test plugin
+author: chikecee
+commands:
+  archer:
+    description: archer kit
+    usage: /<command>
