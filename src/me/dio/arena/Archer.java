@@ -1,21 +1,12 @@
 package me.dio.arena;
 
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
-
 public class Archer implements CommandExecutor {
 
     @Override
@@ -30,8 +21,9 @@ public class Archer implements CommandExecutor {
                 ItemStack arrow = new ItemStack(Material.ARROW, 1);
                 ItemStack bow = new ItemStack(Material.BOW);
                 bow.addEnchantment(Enchantment.ARROW_INFINITE, 1);
+                ItemStack steak = new ItemStack(Material.COOKED_BEEF, 8);
 
-                p.getInventory().addItem(lhelmet, lchest, llegg, lboot, bow, arrow);
+                p.getInventory().addItem(lhelmet, lchest, llegg, lboot, bow, arrow, steak);
 
             }
         return true;
